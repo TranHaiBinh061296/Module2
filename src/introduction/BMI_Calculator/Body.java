@@ -1,4 +1,4 @@
-package BMI_Calculator;
+package introduction.BMI_Calculator;
 
 import java.util.Scanner;
 

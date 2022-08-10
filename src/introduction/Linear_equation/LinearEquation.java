@@ -1,4 +1,4 @@
-package Linear_equation;
+package introduction.Linear_equation;
 
 import java.util.Scanner;
 

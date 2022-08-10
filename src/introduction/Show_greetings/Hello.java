@@ -1,10 +1,12 @@
-package Show_greetings;
+package introduction.Show_greetings;
 
 import java.util.Scanner;
 
 public class Hello {
     public static void main(String[] args) {
-        Scanner hi = new Scanner(System.in);
-        String text = hi.nextLine();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name : ");
+        String name = sc.nextLine();
+        System.out.println(" Hello " + name);
     }
 }

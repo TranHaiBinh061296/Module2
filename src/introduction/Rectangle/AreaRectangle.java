@@ -1,4 +1,4 @@
-package Rectangle;
+package introduction.Rectangle;
 
 import java.util.Scanner;
 

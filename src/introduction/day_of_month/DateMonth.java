@@ -1,4 +1,4 @@
-package day_of_month;
+package introduction.day_of_month;
 
 import java.util.Scanner;
 
