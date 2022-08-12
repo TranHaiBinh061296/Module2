@@ -10,11 +10,11 @@ public class Find {
         System.out.println("Nhập độ dài của mảng : ");
         int size = sc.nextInt();
         int n = 0;
-        int [] array = new int[size];
+        int[] array = new int[size];
         //Nhập các phần tử của mảng vào
         while (n < array.length) {
             System.out.println("Nhập các phần tử của mảng " + (n + 1) + " : ");
-                array[n] = sc.nextInt();
+            array[n] = sc.nextInt();
             n++;
         }
         // in ra các phần tử của mảng
@@ -23,8 +23,8 @@ public class Find {
             System.out.print(array[i] + " ");
         }
         int min = array[0];
-        for (int  i = 0; i < array.length; i++) {
-            if(array[i] < min) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
                 min = array[i];
             }
         }

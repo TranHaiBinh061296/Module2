@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Find {
     public static void main(String[] args) {
-        String[] students = {"Bình", "Khanh", "Lộc", "Hiếu", "Tùng", "Tài", "Hà", "Hướng"};
+        String[] students = {"Hải Bình", "Khanh Hoàng", "Lộc Shawdow", "Hiếu", "Tùng", "Tài", "Hà", "Hướng"};
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập tên học viên bạn muốn tìm : ");
-        String input_name = sc.next();
+        String input_name = sc.nextLine();
         boolean isExist = false;
         for (int i = 0; i < students.length; i++) {
             if(students[i].equals(input_name)) {
