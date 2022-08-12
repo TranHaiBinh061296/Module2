@@ -8,6 +8,7 @@ public class Find {
         int[] array;
         int size;
         Scanner input = new Scanner(System.in);
+        //Khai báo các biến, nhập và kiểm tra kích thước mảng
         do {
             System.out.print("Nhập độ dài : ");
             size = input.nextInt();
@@ -15,6 +16,7 @@ public class Find {
                 System.out.println("Độ dài vượt quá cho phép !");
             }
         } while (size > 20);
+        //Nhập giá trị cho các phần tử của mảng
         array = new int[size];
         int i = 0;
         while (i < array.length) {
@@ -22,10 +24,12 @@ public class Find {
             array[i] = input.nextInt();
             i++;
         }
+        // In ra danh sách tài sản đã nhập
         System.out.println("Danh sách tài sản : ");
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + "\t");
         }
+        //Duyệt các phần tử trong mảng để tìm GTLN và vị trí
         int max;
         max = array[0];
         int index = 1;
