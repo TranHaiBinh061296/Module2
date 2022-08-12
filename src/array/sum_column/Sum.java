@@ -21,7 +21,11 @@ public class Sum {
         // tính tổng các số ở đường chéo chính
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-                    sum += arr[i][i];
+            for (int j = 0; j < arr[i].length; j++) {
+                if (j == j) {
+                    sum += arr[i][j];
+                }
+            }
         }
         System.out.print("Sum is: " + sum);
     }

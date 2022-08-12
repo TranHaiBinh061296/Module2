@@ -18,6 +18,9 @@ public class Sum {
             System.out.println("");
         }
         int sum = 0;
-
+        for(int i = 0 ; i < array.length; i++) {
+            sum += array[i][i];
+        }
+        System.out.println("Tổng các số ở đường chéo chính của mảng là : " + sum);
     }
 }
