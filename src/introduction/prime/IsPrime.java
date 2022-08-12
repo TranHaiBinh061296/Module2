@@ -1,4 +1,4 @@
-package introduction.Prime;
+package introduction.prime;
 
 import java.util.Scanner;
 

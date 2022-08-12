@@ -1,4 +1,4 @@
-package array.Add_element;
+package array.add_element;
 
 import java.util.Scanner;
 

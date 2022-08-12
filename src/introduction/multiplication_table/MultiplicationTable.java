@@ -1,4 +1,4 @@
-package introduction.MultiplicationTable;
+package introduction.multiplication_table;
 
 public class MultiplicationTable {
     /**

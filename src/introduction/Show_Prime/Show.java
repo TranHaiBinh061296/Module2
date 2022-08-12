@@ -1,4 +1,4 @@
-package introduction.Show_Prime;
+package introduction.show_prime;
 
 import java.util.Scanner;
 

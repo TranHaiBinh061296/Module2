@@ -1,4 +1,4 @@
-package array.Find_minimum;
+package array.find_minimum;
 
 public class Find {
     public static int minValue(int[] array) {

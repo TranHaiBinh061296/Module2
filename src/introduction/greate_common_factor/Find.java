@@ -1,4 +1,4 @@
-package introduction.Greate_common_factor;
+package introduction.greate_common_factor;
 
 import java.util.Scanner;
 

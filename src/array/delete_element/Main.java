@@ -1,4 +1,4 @@
-package array.Delete_element;
+package array.delete_element;
 
 import java.util.Scanner;
 

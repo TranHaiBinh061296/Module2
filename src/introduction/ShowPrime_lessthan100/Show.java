@@ -1,4 +1,4 @@
-package introduction.ShowPrime_lessthan100;
+package introduction.showprime_lessthan100;
 
 import java.util.Scanner;
 

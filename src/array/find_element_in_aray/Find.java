@@ -1,4 +1,4 @@
-package array.Find_element_in_aray;
+package array.find_element_in_aray;
 
 import java.util.Scanner;
 

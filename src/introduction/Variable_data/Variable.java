@@ -1,4 +1,4 @@
-package introduction.Variable_data;
+package introduction.variable_data;
 
 public class Variable {
     public static void main(String[] args) {

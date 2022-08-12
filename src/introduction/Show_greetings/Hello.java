@@ -1,4 +1,4 @@
-package introduction.Show_greetings;
+package introduction.show_greetings;
 
 import java.util.Scanner;
 

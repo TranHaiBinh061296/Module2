@@ -1,4 +1,4 @@
-package introduction.Currency;
+package introduction.currency;
 
 import java.util.Scanner;
 

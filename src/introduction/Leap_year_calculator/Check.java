@@ -1,4 +1,4 @@
-package introduction.Leap_year_calculator;
+package introduction.leap_year_calculator;
 
 import java.util.Scanner;
 

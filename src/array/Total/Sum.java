@@ -1,4 +1,4 @@
-package array.Total;
+package array.total;
 
 public class Sum {
     //    public static boolean soduong(int num ) {

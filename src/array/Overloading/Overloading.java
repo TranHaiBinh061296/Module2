@@ -1,4 +1,4 @@
-package array.Overloading;
+package array.overloading;
 
 public class Overloading {
     public static void main(String[] args) {

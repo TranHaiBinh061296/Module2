@@ -1,4 +1,4 @@
-package introduction.Show_Geometries;
+package introduction.show_geometries;
 
 import java.util.Scanner;
 

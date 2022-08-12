@@ -1,4 +1,4 @@
-package introduction.Show_the_time;
+package introduction.show_the_time;
 
 import java.util.Date;
 

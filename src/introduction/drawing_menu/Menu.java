@@ -1,4 +1,4 @@
-package introduction.Drawing_Menu;
+package introduction.drawing_menu;
 
 import java.util.Scanner;
 

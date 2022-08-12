@@ -1,4 +1,4 @@
-package introduction.Interest_Calculator;
+package introduction.interest_calculator;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package array.Find_max_element;
+package array.find_max_element;
 
 
 import java.util.Scanner;

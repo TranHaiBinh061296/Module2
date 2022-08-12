@@ -1,4 +1,4 @@
-package introduction.BCNN3Number;
+package introduction.bcnn3number;
 
 import java.util.Scanner;
 

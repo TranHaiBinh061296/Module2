@@ -1,4 +1,4 @@
-package array.Temperature;
+package array.temperature;
 
 import java.util.Scanner;
 
