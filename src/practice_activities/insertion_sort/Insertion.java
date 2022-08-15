@@ -1,15 +1,15 @@
 package practice_activities.insertion_sort;
 
 public class Insertion {
-    public static void insertionSort(int a[], int n) {
-        for (int i = 1; i < n ; i++) {
-            int x = a[i]; // phần tử muốn chèn vào đoạn con
+    public static void insertionSort(int array[], int n) {
+        for (int i = 1; i < n; i++) {
+            int x = array[i]; // phần tử muốn chèn vào đoạn con
             int pos = i - 1;
-            while (pos >= 0 && a[pos] > x) {
-                a[pos + 1] = a[pos];
-                pos--;
+            while (pos >= 0 && array[pos] > x) {
+                array[pos + 1] = array[pos];
+                pos = pos -1;
             }
-            a[pos + 1] = x;
+            array[pos + 1] = x;
         }
     }
 

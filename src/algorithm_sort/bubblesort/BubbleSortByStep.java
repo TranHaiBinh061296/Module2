@@ -7,9 +7,9 @@ public class BubbleSortByStep {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập độ dài của mảng: ");
         int size = sc.nextInt();
-        int [] list = new int[size];
+        int[] list = new int[size];
         System.out.println("Nhập " + list.length + " phần tử mảng: ");
-        for (int i =0; i < list.length; i++) {
+        for (int i = 0; i < list.length; i++) {
             list[i] = sc.nextInt();
         }
         System.out.print("Phần tử đầu vào của bạn là :");

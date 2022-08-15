@@ -8,17 +8,18 @@ public class Selection {
     }
 
     public static void selectionSort(int a[], int n) {
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 0; i < n -1; i++) {
             int min_pos = i;
-            for (int j = i + 1; j < n; j++) {
+            for (int j = i + 1; j < n;j++) {
                 if (a[j] < a[min_pos]) {
-                    min_pos = j; // ghi nhận vị trí phần tử nhỏ nhất
+                    min_pos = j;
                 }
             }
-            int t = a[min_pos];
-            a[min_pos] = a[i];
-            a[i] = t;
-//          swap(a[min_pos], a[i]);
+            if (min_pos != i) {
+                int temt = a[i];
+                a[i] = a[min_pos];
+                a[min_pos] = temt;
+            }
         }
     }
 
