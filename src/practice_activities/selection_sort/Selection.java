@@ -12,18 +12,18 @@ public class Selection {
             int min_pos = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[min_pos]) {
-                    min_pos = j;
+                    min_pos = j; // ghi nhận vị trí phần tử nhỏ nhất
                 }
-                int t = a[min_pos];
-                a[min_pos] = a[i];
-                a[i] = t;
-//                swap(a[min_pos], a[i]);
             }
+            int t = a[min_pos];
+            a[min_pos] = a[i];
+            a[i] = t;
+//          swap(a[min_pos], a[i]);
         }
     }
 
     public static void main(String[] args) {
-        int array[] = {3, 2, 6, 5, -4, -10, 12, 15, 35, 24};
+        int array[] = {3, 2, 6, 5, -4, 2, 6, -10, 12, 15, 35, 24};
         selectionSort(array, array.length);
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
