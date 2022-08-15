@@ -7,14 +7,14 @@ public class Insertion {
             int pos = i - 1;
             while (pos >= 0 && array[pos] > x) {
                 array[pos + 1] = array[pos];
-                pos = pos -1;
+                pos = pos - 1;
             }
             array[pos + 1] = x;
         }
     }
 
     public static void main(String[] args) {
-        int a[] = {5, 3, 6, 2, -5, 9, 12, 25, 10};
+        int a[] = {5, 3, 6, 2, -5, 9, -20,5,12, 12, 25, 10};
         insertionSort(a, a.length);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
