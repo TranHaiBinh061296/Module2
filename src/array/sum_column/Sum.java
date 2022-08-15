@@ -18,7 +18,7 @@ public class Sum {
             }
             System.out.println("");
         }
-        // tính tổng các số ở đường chéo chính
+        // tính tổng
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
