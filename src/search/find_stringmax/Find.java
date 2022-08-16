@@ -46,7 +46,7 @@ public class Find {
  *  1 câu lệnh = 1
  * 	1 vòng lặp * 1 câu lệnh = 1;
  *  T(n) = (n * (n - 1)) + (1 + 1);
- *  T(n) = O(n^2) + O(n);       
+ *  T(n) = O(n^2) + O(n);
  * 	T(n) = O(n^2);
  * 	=> Độ phức tạp bài toán này là O(n^2)
      */
