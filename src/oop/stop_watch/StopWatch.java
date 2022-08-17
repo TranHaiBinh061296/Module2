@@ -1,56 +1,65 @@
 package oop.stop_watch;
 
 import java.time.LocalTime;
-import java.util.Random;
 
 public class StopWatch {
-    public static void main(String[] args) {
-        StopWatch watch = new StopWatch();
-        watch.start();
-        System.out.printf("Start: %d\n", watch.getStarTime());
-        watch.end();
-        System.out.printf("End: %d\n", watch.getEndTime());
-        System.out.printf("Elased Time %d\n", watch.getElapsedTime());
-    }
-    private long starTime;
-    private long endTime;
+    private LocalTime startTime, endTime;
 
-    public long getStarTime() {
-        return starTime;
+    public StopWatch() {
+        startTime = LocalTime.now();
     }
 
-    public long getEndTime() {
+    public StopWatch(LocalTime startTime, LocalTime endTime) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public LocalTime getEndTime() {
         return endTime;
     }
 
-    public long getElapsedTime() {
-        long elapsed = starTime - endTime;
-        return elapsed;
+    public void start() {
+        startTime = LocalTime.now();
     }
-    public int [] randomArray() {
-        int [] array = new int[100000];
-        for (int i =0; i < 100000; i++) {
-            array[i] = (new Random()).nextInt(100000)+1;
-        }
-        return array;
+
+    public void stop() {
+        endTime = LocalTime.now();
     }
-    public void selectionSort(int [] arr) {
-        for (int i = 0; i < arr.length -1; i++) {
-            int min_idx = i;
-            for (int j = 1; j <arr.length; j++) {
-                if(arr[j] < arr[min_idx]) {
-                    min_idx = j;
+
+    public int getElapsedTime() {
+        int miliSecond = (((endTime.getHour() - startTime.getHour()) * 3600 + (endTime.getMinute() - startTime.getMinute()) * 60 + endTime.getSecond() - startTime.getSecond()) * 1000);
+        return miliSecond;
+    }
+
+    public static int[] selectionSort(int... a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j] < a[i]) {
+                    int tempt = a[i];
+                    a[i] = a[j];
+                    a[j] = tempt;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[min_idx];
-            arr[min_idx] = temp;
         }
+        return a;
     }
-    public void start() {
-        this.starTime = System.currentTimeMillis();
-    }
-    public void end() {
-        this.endTime = System.currentTimeMillis();
+
+    public static void main(String[] args) {
+        int[] a = new int[100000];
+        for (int i = 0; i < 100000; i++) {
+            a[i] = (int) (Math.random() * 1000);
+        }
+        LocalTime start = LocalTime.now();
+        System.out.print("Start Time: " + start);
+        a = selectionSort(a);
+
+        LocalTime end = LocalTime.now();
+        System.out.print("\nEnd Time: " + end);
+        StopWatch swt = new StopWatch(start, end);
+        System.out.println("\nTime: " + swt.getElapsedTime() + " milisecond");
     }
 }
