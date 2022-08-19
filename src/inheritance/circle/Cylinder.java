@@ -1,30 +1,30 @@
 package inheritance.circle;
 
 public class Cylinder extends Circle{
-    private double chieucao = 3.0;
+    private double height = 3.0;
 
     public Cylinder() {
     }
-    public Cylinder(double chieucao, String color, double radius) {
+    public Cylinder(double height, String color, double radius) {
         super(radius, color);
-        this.chieucao = chieucao;
+        this.height = height;
     }
 
-    public double getChieucao() {
-        return chieucao;
+    public double getHeight() {
+        return height;
     }
 
-    public void setChieucao(double chieucao) {
-        this.chieucao = chieucao;
+    public void setHeight(double high) {
+        this.height = high;
     }
     public double getVolumetric() {
-        return 2*Math.PI*getRadius()*chieucao;
+        return Math.PI*getRadius()*getRadius()*height;
     }
 
     @Override
     public String toString() {
         return "Hình trụ có chiều cao là: "
-                + getChieucao()
+                + getHeight()
                 + " à lớp con của "
                 + super.toString();
     }
