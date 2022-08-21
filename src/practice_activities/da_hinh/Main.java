@@ -40,7 +40,7 @@ public class Main {
 //        }
         //3.ép kiểu đối tượng
         // ép kiểu dữ liệu cha về con
-        long x =10;
+        long x = 10;
         int i = (int) x;
 
         Worker worker = new Worker();
@@ -49,8 +49,9 @@ public class Main {
         Object obj = new Worker(); //Object là class cha của mọi class
 
         worker.salary();
-        Worker ep = (Worker) employee; //ép kiểu tường minh, employee (cha) về worker(con)
-        ep.salary();
-
+        if (employee instanceof Worker) {
+            Worker ep = (Worker) employee; //ép kiểu tường minh, employee (cha) về worker(con)
+            ep.salary();
+        }
     }
 }
