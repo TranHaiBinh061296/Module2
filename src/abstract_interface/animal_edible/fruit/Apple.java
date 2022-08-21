@@ -1,4 +1,4 @@
-package abstract_interface.animal_edible.fruit;
+package abstract_interface.fruit;
 
 public class Apple extends Fruit{
     @Override

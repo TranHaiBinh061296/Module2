@@ -1,6 +1,6 @@
 package abstract_interface.animal_edible.animal;
 
-import abstract_interface.animal_edible.edible.Edible;
+import abstract_interface.animal_edible.animal.edible.Edible;
 
 public class Chicken extends Animal implements Edible {
 
