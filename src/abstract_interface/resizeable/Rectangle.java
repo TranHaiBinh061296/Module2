@@ -1,4 +1,4 @@
-package abstract_interface.animal_edible.resizeable;
+package abstract_interface.resizeable;
 
 public class Rectangle extends Shape {
     private double width, height;

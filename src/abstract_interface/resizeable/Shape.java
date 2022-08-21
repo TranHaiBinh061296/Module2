@@ -1,4 +1,4 @@
-package abstract_interface.animal_edible.resizeable;
+package abstract_interface.resizeable;
 
 public abstract class Shape implements Resizeable {
     private String color = "green";

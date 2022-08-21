@@ -1,4 +1,4 @@
-package abstract_interface.animal_edible.resizeable;
+package abstract_interface.resizeable;
 
 public class Circle extends Shape implements Resizeable {
     private double radius;

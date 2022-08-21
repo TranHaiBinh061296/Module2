@@ -1,4 +1,4 @@
-package abstract_interface.animal_edible.resizeable;
+package abstract_interface.resizeable;
 
 public class Aquare extends Shape {
     private double side;
