@@ -5,24 +5,24 @@ import java.util.Scanner;
 public class Menu {
 
     Scanner sc = new Scanner(System.in);
-    int choice;
 
-    public void menuAdmin() {
-        System.out.println("❖◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛❖");
-        System.out.printf("%-44s❖\n", "❖");
-        System.out.printf("%-44s❖\n", "❖");
-        System.out.printf("%s%26s%18s\n", "❖", "1.Đăng nhập", "❖");
-        System.out.printf("%s%24s%20s\n", "❖", "2.Đăng ký", "❖");
-        System.out.printf("%s%26s%18s\n", "❖", "0.Đăng xuất", "❖");
-        System.out.printf("%-44s❖\n", "❖");
-        System.out.printf("%-44s❖\n", "❖");
-        System.out.println("❖◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛❖");
+    public void menuLogin() {
+        int choice;
         do {
+            System.out.println("❖◛◛◛◛◛◛◛◛◛◛◛◛MAIN MENU◛◛◛◛◛◛◛◛◛◛◛◛◛❖");
+            System.out.printf("%-44s❖\n", "❖");
+            System.out.printf("%-44s❖\n", "❖");
+            System.out.printf("%s%26s%18s\n", "❖", "1.Đăng nhập", "❖");
+            System.out.printf("%s%24s%20s\n", "❖", "2.Đăng ký", "❖");
+            System.out.printf("%s%26s%18s\n", "❖", "0.Đăng xuất", "❖");
+            System.out.printf("%-44s❖\n", "❖");
+            System.out.printf("%-44s❖\n", "❖");
+            System.out.println("❖◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛◛❖");
             System.out.println("Xin vui lòng đăng nhập hoặc đăng ký");
-            choice = sc.nextInt();
+            choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    menuAdmin1();
+                    menuMain();
                     break;
                 case 2:
                     System.out.println("Không cho đăng ký :)))");
@@ -36,22 +36,25 @@ public class Menu {
 
     }
 
-    public void menuAdmin1() {
-        System.out.println("❐◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈❐");
-        System.out.printf("%-44s❐\n", "❐");
-        System.out.printf("%s%30s%14s\n", "❐", "1.Quản lý người dùng", "❐");
-        System.out.printf("%s%28s%16s\n", "❐", "2.Quản lý hàng hóa", "❐");
-        System.out.printf("%s%32s%12s\n", "❐", "3.Quản lý đơn đặt hàng", "❐");
-        System.out.printf("%s%20s%24s\n", "❐", "4.Quay lại", "❐");
-        System.out.printf("%s%17s%27s\n", "❐", "0.Thoát", "❐");
-        System.out.printf("%-44s❐\n", "❐");
-        System.out.println("❐◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈❐");
+    public void menuMain() {
+
+        int choice;
         do {
+            System.out.println("❐◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈❐");
+            System.out.printf("%-44s❐\n", "❐");
+            System.out.printf("%s%30s%14s\n", "❐", "1.Quản lý người dùng", "❐");
+            System.out.printf("%s%28s%16s\n", "❐", "2.Quản lý hàng hóa", "❐");
+            System.out.printf("%s%32s%12s\n", "❐", "3.Quản lý đơn đặt hàng", "❐");
+            System.out.printf("%s%20s%24s\n", "❐", "4.Quay lại", "❐");
+            System.out.printf("%s%17s%27s\n", "❐", "0.Thoát", "❐");
+            System.out.printf("%-44s❐\n", "❐");
+            System.out.println("❐◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈❐");
             System.out.println("Nhập đến nơi bạn muốn quản lý");
-            choice = sc.nextInt();
+            System.out.println("=>");
+            choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    menuAdmin2();
+                    menuUser();
                     break;
                 case 2:
                     menuAdmin3();
@@ -60,11 +63,11 @@ public class Menu {
                     menuAdmin4();
                     break;
                 case 4:
-                    menuAdmin();
                     break;
                 case 0:
                     System.out.println("Tạm biệt");
                     System.exit(0);
+                    break;
                 default:
                     System.out.println("Nhập sai");
                     break;
@@ -73,19 +76,21 @@ public class Menu {
         } while (choice != 4);
     }
 
-    public void menuAdmin2() {
-        System.out.println("웃▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬웃");
-        System.out.printf("%-42s✉▋웃\n", "웃▋✆");
-        System.out.printf("%s%30s%14s\n", "웃▋", "1.Thêm người dùng", "▋웃");
-        System.out.printf("%s%29s%15s\n", "웃▋", "2.Sửa người dùng", "▋웃");
-        System.out.printf("%s%29s%15s\n", "웃▋", "3.Xóa người dùng", "▋웃");
-        System.out.printf("%s%23s%21s\n", "웃▋", "4.Quay lại", "▋웃");
-        System.out.printf("%s%20s%24s\n", "웃▋", "0.Thoát", "▋웃");
-        System.out.printf("%-42s☎▋웃\n", "웃▋✍");
-        System.out.println("웃▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬웃");
+    public void menuUser() {
 
+
+        int choice;
         do {
-            choice = sc.nextInt();
+            System.out.println("웃▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬웃");
+            System.out.printf("%-42s✉▋웃\n", "웃▋✆");
+            System.out.printf("%s%30s%14s\n", "웃▋", "1.Thêm người dùng", "▋웃");
+            System.out.printf("%s%29s%15s\n", "웃▋", "2.Sửa người dùng", "▋웃");
+            System.out.printf("%s%29s%15s\n", "웃▋", "3.Xóa người dùng", "▋웃");
+            System.out.printf("%s%23s%21s\n", "웃▋", "4.Quay lại", "▋웃");
+            System.out.printf("%s%20s%24s\n", "웃▋", "0.Thoát", "▋웃");
+            System.out.printf("%-42s☎▋웃\n", "웃▋✍");
+            System.out.println("웃▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬웃");
+            choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
                     System.out.println("Thêm người dùng");
@@ -97,7 +102,6 @@ public class Menu {
                     System.out.println("xoa người dùng");
                     break;
                 case 4:
-                    menuAdmin1();
                     break;
                 case 0:
                     System.out.println("Tạm biệt");
@@ -119,8 +123,9 @@ public class Menu {
         System.out.printf("%s%22s%23s\n", "�", "0.Thoát", "�");
         System.out.printf("%-43s❂�\n", "�❂");
         System.out.println("�◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘�");
+        int choice;
         do {
-            choice = sc.nextInt();
+            choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
                     System.out.println("Thêm sản phẩm");
@@ -132,7 +137,7 @@ public class Menu {
                     System.out.println("xóa sản phẩm");
                     break;
                 case 4:
-                    menuAdmin1();
+
                     break;
                 case 0:
                     System.out.println("Tạm biệt");
@@ -154,8 +159,9 @@ public class Menu {
         System.out.printf("%s%22s%23s\n", "✬", "0.Thoát", "✬");
         System.out.printf("%-43sდ✬\n", "✬დ");
         System.out.println("✬⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿⦿✬");
+        int choice;
         do {
-            choice = sc.nextInt();
+            choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
                     System.out.println("Thêm đơn hàng");
@@ -167,7 +173,7 @@ public class Menu {
                     System.out.println("xóa đơn hàng");
                     break;
                 case 4:
-                    menuAdmin1();
+                    menuMain();
                     break;
                 case 0:
                     System.out.println("Tạm biệt");

@@ -22,5 +22,6 @@ public class Main {
         aquare.resize(percent);
         shapes[2] =aquare;
         System.out.println("Array after resizing : " + Arrays.toString(shapes));
+
     }
 }

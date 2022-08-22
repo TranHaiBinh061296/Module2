@@ -13,8 +13,9 @@ public class Main {
 ////        p.setSalary(4.5); //Không nằm trong chuỗi kế thừa
 //
 //        emp.information();
-//        p.information(); //gọi hàm trong đối tượng Employee chứ k gọi trong hàm Person,
+        //gọi hàm trong đối tượng Employee chứ k gọi trong hàm Person,
 //                          nên chỉ lấy gtr đc từ đt Employee
+//        p.information();
 //
 //        Person person = new Person();
 //        person.information();
