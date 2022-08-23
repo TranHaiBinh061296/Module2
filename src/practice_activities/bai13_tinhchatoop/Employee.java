@@ -1,32 +1,34 @@
 package practice_activities.bai13_tinhchatoop;
 
+import java.security.cert.Certificate;
+import java.time.LocalDate;
+import java.util.List;
+
 public abstract class Employee {
-    protected int iD;
+    public static long count = 0;
+    protected String iD;
     protected String fullName;
-    protected int birthday;
+    protected LocalDate birthday;
     protected int phone;
     protected String email;
-    protected int employee_Type;
-    protected int employee_Count;
+    protected List<Certificate> certificates;
 
-    public Employee() {
-    }
+    public Employee() {}
 
-    public Employee(int iD, String fullName, int birthday, int phone, String email, int employee_Type, int employee_Count) {
+    public Employee(String iD, String fullName, LocalDate birthday, int phone, String email, List<Certificate> certificates) {
         this.iD = iD;
         this.fullName = fullName;
         this.birthday = birthday;
         this.phone = phone;
         this.email = email;
-        this.employee_Type = employee_Type;
-        this.employee_Count = employee_Count;
+        this.certificates = certificates;
     }
 
-    public int getiD() {
+    public String getiD() {
         return iD;
     }
 
-    public void setiD(int iD) {
+    public void setiD(String iD) {
         this.iD = iD;
     }
 
@@ -38,11 +40,11 @@ public abstract class Employee {
         this.fullName = fullName;
     }
 
-    public int getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(int birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -62,21 +64,12 @@ public abstract class Employee {
         this.email = email;
     }
 
-    public int getEmployee_Type() {
-        return employee_Type;
+    public List<Certificate> getCertificates() {
+        return certificates;
     }
 
-    public void setEmployee_Type(int employee_Type) {
-        this.employee_Type = employee_Type;
+    public void setCertificates(List<Certificate> certificates) {
+        this.certificates = certificates;
     }
-
-    public int getEmployee_Count() {
-        return employee_Count;
-    }
-
-    public void setEmployee_Count(int employee_Count) {
-        this.employee_Count = employee_Count;
-    }
-
-    public abstract String ShowInfo();
+    public abstract void showMe();
 }
