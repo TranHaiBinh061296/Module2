@@ -9,25 +9,28 @@ public class Intern extends Employee {
     private String majors;
     private int semester;
     private String university_Name;
+    private int employee_Type = 2;
 
     public Intern() {
     }
 
-    public Intern(String majors, int semester, String university_Name) {
+    public Intern(String majors, int semester, String university_Name, int employee_Type) {
         this.majors = majors;
         this.semester = semester;
         this.university_Name = university_Name;
+        this.employee_Type = employee_Type;
     }
 
-    public Intern(String iD, String fullName, LocalDate birthday, int phone, String email, List<Certificate> certificates, String majors, int semester, String university_Name) {
+    public Intern(String iD, String fullName, String birthday, long phone, String email, List<Certificated> certificates, String majors, int semester, String university_Name, int employee_Type) {
         super(iD, fullName, birthday, phone, email, certificates);
         this.majors = majors;
         this.semester = semester;
         this.university_Name = university_Name;
+        this.employee_Type = employee_Type;
     }
 
     @Override
-    public void showMe() {
+    public void showInfo() {
         System.out.println(this);
     }
 
@@ -53,6 +56,14 @@ public class Intern extends Employee {
 
     public void setUniversity_Name(String university_Name) {
         this.university_Name = university_Name;
+    }
+
+    public int getEmployee_Type() {
+        return employee_Type;
+    }
+
+    public void setEmployee_Type(int employee_Type) {
+        this.employee_Type = employee_Type;
     }
 
     @Override

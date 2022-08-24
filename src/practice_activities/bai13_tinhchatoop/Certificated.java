@@ -47,4 +47,13 @@ public class Certificated {
     public void setDate(String date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Certificated " +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", rank='" + rank + '\'' +
+                ", date='" + date + '\'' ;
+    }
 }

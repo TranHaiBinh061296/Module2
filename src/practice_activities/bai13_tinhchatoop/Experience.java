@@ -1,24 +1,25 @@
 package practice_activities.bai13_tinhchatoop;
 
-import java.security.cert.Certificate;
-import java.time.LocalDate;
 import java.util.List;
 
 public class Experience extends Employee {
     private int expInYear;
     private String proSkill;
+    private int employee_Type = 0;
 
-    public Experience(String iD, String fullName, LocalDate birthday, int phone, String email, List<Certificate> certificates, int expInYear, String proSkill) {
+    public Experience(String iD, String fullName, String birthday, long phone, String email, List<Certificated> certificates, int expInYear, String proSkill, int employee_Type) {
         super(iD, fullName, birthday, phone, email, certificates);
         this.expInYear = expInYear;
         this.proSkill = proSkill;
+        this.employee_Type = employee_Type;
     }
     public Experience() {
     }
 
-    public Experience(int expInYear, String proSkill) {
+    public Experience(int expInYear, String proSkill, int employee_Type) {
         this.expInYear = expInYear;
         this.proSkill = proSkill;
+        this.employee_Type = employee_Type;
     }
 
     public int getExpInYear() {
@@ -37,8 +38,16 @@ public class Experience extends Employee {
         this.proSkill = proSkill;
     }
 
+    public int getEmployee_Type() {
+        return employee_Type;
+    }
+
+    public void setEmployee_Type(int employee_Type) {
+        this.employee_Type = employee_Type;
+    }
+
     @Override
-    public void showMe() {
+    public void showInfo() {
         System.out.println(this);
     }
 

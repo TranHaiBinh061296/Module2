@@ -8,14 +8,16 @@ public abstract class Employee {
     public static long count = 0;
     protected String iD;
     protected String fullName;
-    protected LocalDate birthday;
-    protected int phone;
+    protected String birthday;
+    protected long phone;
     protected String email;
-    protected List<Certificate> certificates;
+    protected List<Certificated> certificates;
 
-    public Employee() {}
+    public Employee() {
+    }
 
-    public Employee(String iD, String fullName, LocalDate birthday, int phone, String email, List<Certificate> certificates) {
+    public Employee(String iD, String fullName, String birthday, long phone, String email, List<Certificated> certificates) {
+        count++;
         this.iD = iD;
         this.fullName = fullName;
         this.birthday = birthday;
@@ -40,19 +42,19 @@ public abstract class Employee {
         this.fullName = fullName;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 
@@ -64,12 +66,17 @@ public abstract class Employee {
         this.email = email;
     }
 
-    public List<Certificate> getCertificates() {
+    public List<Certificated> getCertificates() {
         return certificates;
     }
 
-    public void setCertificates(List<Certificate> certificates) {
+    public void setCertificates(List<Certificated> certificates) {
         this.certificates = certificates;
     }
-    public abstract void showMe();
+
+    public long getCount() {
+        return count;
+    }
+
+    public abstract void showInfo();
 }
