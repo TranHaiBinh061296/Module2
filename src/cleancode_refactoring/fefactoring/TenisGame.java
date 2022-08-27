@@ -16,7 +16,7 @@ public class TenisGame {
     public static final String WIN_FOR_PLAYER_2 = "Win for player2";
 
     public static void main(String[] args) {
-        String result = getScore(55, 5);
+        String result = getScore(5, 5);
         System.out.println(result);
     }
 
