@@ -27,27 +27,42 @@ public class MyLinkedList<E> {
     }
 
     public void addFirst(E element) {
-        //Khai báo 1 biến là temp tham chiếu(trỏ) đến giá trị của head
-        Node temp = head;
-        //Biến head sẽ nhận được giá trị là 1 node mới
-        head = new Node(element);
-        //head.next trỏ đến temp
-        head.next = temp;
+        if (head == null) {
+            head = new Node(element);
+        } else {
+            //Khai báo 1 biến là temp tham chiếu(trỏ) đến giá trị của head
+            Node temp = head;
+            //Biến head sẽ nhận được giá trị là 1 node mới
+            head = new Node(element);
+            //head.next trỏ đến temp
+            head.next = temp;
+        }
         numNodes++;
     }
 
     public void addLast(E element) {
-        //Khai báo biến temp trỏ đến head
-        Node temp = head;
-        //Sẽ cho con trỏ chạy đến phần tử cuối cùng của danh sách
-        while (temp.next != null) {
-            temp = temp.next;
+        if (head == null) {
+            addFirst(element);
+        }else {//Khai báo biến temp trỏ đến head
+            Node temp = head;
+            //Sẽ cho con trỏ chạy đến phần tử cuối cùng của danh sách
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = new Node(element);
         }
-        temp.next = new Node(element);
         numNodes++;
     }
 
     public void add(int index, E element) {
+        if (index == 0) {
+            addFirst(element);
+            return;
+        }
+        if (index == size()) {
+            addLast(element);
+            return;
+        }
         //Khai báo biến temp trỏ đến head
         Node temp = head;
         //Khai báo 1 node là holder
