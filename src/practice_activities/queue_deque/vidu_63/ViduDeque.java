@@ -14,6 +14,8 @@ public class ViduDeque {
         danhSachSV.offerLast("Loc 4");
         danhSachSV.offerFirst("Loc 001");
 
+        // Loc 001 > Hai Binh B> Hai Binh A >Loc fuho 2 >Loc fuho 1 > Loc 4
+
         while (true) {
             String ten = danhSachSV.poll();
             if (ten == null) {
@@ -21,6 +23,7 @@ public class ViduDeque {
             }
             System.out.println(ten);
         }
+//        System.out.println(danhSachSV.peek());
 
     }
 }

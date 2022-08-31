@@ -57,13 +57,19 @@ public class SinhVien implements Comparable<SinhVien>{
         return this.maSinhVien.compareTo(o.maSinhVien);
     }
 
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SinhVien sinhVien = (SinhVien) o;
-        return Objects.equals(maSinhVien, sinhVien.maSinhVien);
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        SinhVien other = (SinhVien) obj;
+        return Objects.equals(maSinhVien, other.maSinhVien);
     }
+
 
     @Override
     public int hashCode() {

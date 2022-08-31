@@ -1,14 +1,14 @@
 package practice_activities.queue_deque.vidu_63;
 
-import java.util.LinkedList;
 import java.util.Queue;
 
 public class PriorityQueue {
     public static void main(String[] args) {
-        Queue<String> danhSachSV = new LinkedList<String>();
-        danhSachSV.offer("Hai Binh 0612");
-        danhSachSV.offer("Khanh Hoang");
-        danhSachSV.offer("Loc fuho ");
+        Queue<String> danhSachSV = new java.util.PriorityQueue<String>();//Sắp xếp lại so sánh tử đầu đến cuối
+        danhSachSV.offer("Hai Binh B");
+        danhSachSV.offer("Hai Binh A");
+        danhSachSV.offer("Loc fuho 2");
+        danhSachSV.offer("Loc fuho 1");
 
         while (true) {
             String ten = danhSachSV.poll();//poll lấy ra và xóa
