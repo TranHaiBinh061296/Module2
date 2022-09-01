@@ -1,4 +1,4 @@
-package java_collection_framework.postorder_binarysearch;
+package java_collection_framework.tree_binarysearch_delete;
 
 public class TreeNode<E>{
     protected E element;

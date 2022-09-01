@@ -1,4 +1,4 @@
-package java_collection_framework.postorder_binarysearch;
+package java_collection_framework.tree_binarysearch_delete;
 
 public class BST <E extends Comparable<E>> extends AbstractTree<E>{
     protected TreeNode<E> root;
