@@ -20,9 +20,10 @@ public class CrawlSongExample {
             String content = scanner.next();
             // close scanner
             scanner.close();
-            // remove all new line
+            // Xóa t?t c? các new line trong content l?y ???c
             content = content.replaceAll("\\n+", "");
-            // regex
+            //  L?c n?i dung content l?y ???c trong tag a ch?a class name_song
+            //  và In ra danh sách tên bài hát l?y ???c theo ?i?u ki?n l?c
             Pattern p = Pattern.compile("name_song\">(.*?)</a>");
             Matcher m = p.matcher(content);
             while (m.find()) {
