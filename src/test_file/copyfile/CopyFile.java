@@ -57,7 +57,7 @@ public class CopyFile {
 //        try {
 //            Files.move(folder_1.toPath(), folder_1new.toPath(), StandardCopyOption.REPLACE_EXISTING);
 //        } catch (IOException e) {
-//            // TODO Auto-generated catch block
+//            // TODO Auto-generated catc3h block
 //            e.printStackTrace();
 //        }
         // 3. Copy file cách 1 k copy phần con bên trong
