@@ -1,4 +1,4 @@
-package string_regex.validate_count;
+package string_regex.validate_account;
 
 public class AccountExampleTest {
     private static AccountExample accountExample;
