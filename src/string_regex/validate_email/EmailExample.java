@@ -9,7 +9,7 @@ public class EmailExample {
     private Matcher matcher;
 
     private static final String EMAIL_REGEX = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$";
-    //"^[A-Za-z0-9]{8,16}+@[a-z]+\\.[a-z]{2,3}$";
+    //"^[A-Za-z0-9.]{8,16}+@[a-z]+\\.[a-z]{2,3}$";
     public EmailExample() {
         pattern = Pattern.compile(EMAIL_REGEX);
     }
