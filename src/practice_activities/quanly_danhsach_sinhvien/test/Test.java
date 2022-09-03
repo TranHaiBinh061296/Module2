@@ -3,6 +3,7 @@ package practice_activities.quanly_danhsach_sinhvien.test;
 import practice_activities.quanly_danhsach_sinhvien.quanly.DanhSachSinhVien;
 import practice_activities.quanly_danhsach_sinhvien.quanly.SinhVien;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Test {
@@ -22,6 +23,7 @@ public class Test {
                     "7.Xóa một sinh viên ra khỏi danh sách dựa trên mã sinh viên.\n" +
                     "8.Tìm kiếm tất cả sinh viên dựa trên Tên được nhập từ bàn phím.\n" +
                     "9.Xuất ra danh sách sinh viên có điểm từ cao đến thấp.\n" +
+                    "10.	Lưu danh sách sinh viên xuống tập tin.\n" +
                     "0.   Thoát khỏi chương trình");
             luaChon = sc.nextInt();
             sc.nextLine();
@@ -55,6 +57,12 @@ public class Test {
             } else if (luaChon == 9) {
                 dssv.sapXepSinhVienGiamDanTheoDiem();
                 dssv.inDanhSachSinhVien();
+            } else if(luaChon==10) {
+			System.out.println("Nhập họ và tên: "); String hoVaTen = sc.nextLine();
+//                System.out.println("Nhap ten file: ");
+                String tenFile = sc.nextLine();
+                File f = new File(tenFile);
+                dssv.ghiDuLieuXuongFile(f);
             }
         }while (luaChon != 0);
     }

@@ -1,9 +1,10 @@
 package practice_activities.quanly_danhsach_sinhvien.quanly;
 
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class SinhVien implements Comparable<SinhVien>{
+public class SinhVien implements Comparable<SinhVien>, Serializable {
     private String maSinhVien;
     private String hoVaTen;
     private int namSinh;
