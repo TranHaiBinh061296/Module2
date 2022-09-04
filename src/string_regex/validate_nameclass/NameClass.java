@@ -10,7 +10,7 @@ public class NameClass {
 //    Theo sau ký t? b?t ??u là 4 ký t? s?
 //    K?t thúc ph?i là 1 trong nh?ng ký t? ch? hoa sau:
 //    G, H, I, K, L, M
-    private static final String CLASS_REGEX = "^[C|A|Z]+\\d{4}[G|H|I|K|L|M]$";
+    private static final String CLASS_REGEX = "^[CAZ]+\\d{4}[GHIKLM]$";
     //"^[C|A|P]+\\d{4}[G|H|I|K|L|M]";
 
     public NameClass() {
